@@ -9,13 +9,13 @@
 
 <script>
 
-import controls from './components/sciloqiControls.vue';
-import zoom from './components/sciloqiZoom.vue';
-import slide from './components/sciloqiSlide.vue';
-import slideUp from './components/sciloqiSlideUp.vue';
-import flipY from './components/sciloqiFlipY.vue';
-import flipX from './components/sciloqiFlipX.vue';
-import fade from './components/sciloqiFade.vue';
+import controls from './components/controls.vue';
+import zoom from './components/zoom.vue';
+import slide from './components/slide.vue';
+import slideUp from './components/slideUp.vue';
+import flipY from './components/flipY.vue';
+import flipX from './components/flipX.vue';
+import fade from './components/fade.vue';
 
 export default {
   name: 'app',
