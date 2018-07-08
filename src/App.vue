@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <component :is="state.view" :state="state">
+      <h1>{{ state.view }}</h1>
+    </component>
+    <controls :state="state"></controls>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import controls from './components/sciloqiControls.vue';
+import zoom from './components/sciloqiZoom.vue';
+import slide from './components/sciloqiSlide.vue';
+import slideUp from './components/sciloqiSlideUp.vue';
+import flipY from './components/sciloqiFlipY.vue';
+import flipX from './components/sciloqiFlipX.vue';
+import fade from './components/sciloqiFade.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    controls,
+    zoom,
+    slide,
+    slideUp,
+    flipY,
+    flipX,
+    fade
+  },
+  data() {
+    return {
+        state: {
+          animations: ['fade', 'slide', 'slideUp', 'zoom', 'flipX', 'flipY'],
+          view: 'fade'
+        }
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>

@@ -1,0 +1,13 @@
+module.exports = `
+<transition id="page"
+	v-on:enter="enter" 
+	v-on:leave="leave"
+	v-bind:css="false"
+	appear
+>
+	<div class="page" v-bind:class="state.view">
+		<div class="center">
+			<slot></slot>
+		</div>
+	</div>
+</transition>`;
